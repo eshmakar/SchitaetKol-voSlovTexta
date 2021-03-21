@@ -7,7 +7,8 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter the text:");
         String s = scanner.nextLine();
-        String[] mas = s.replace("!", "").replace("?", "").replace("»", "").replace("«", "").replace("—", "").replace(",", "").replace("(", "").replace(")", "").replace(".", "").replace("  ", " ").split(" ");
+        scanner.close();
+        String[] mas = s.replace("-", "").replace("!", "").replace("?", "").replace("»", "").replace("«", "").replace("—", "").replace(",", "").replace("(", "").replace(")", "").replace(".", "").replace("  ", " ").split(" ");
         int count = 0;
         int count2 = 0;
         int max = 0;
@@ -27,6 +28,5 @@ public class Main {
 
         System.out.println();
         System.out.printf("Текст содержит: %d слов. Кол-во не повторяющихся слов: %d. Самое длинное слово: '%s', оно содержит %d символов\n", count, count2, dlinnoeSlovo, max);
-        scanner.close();
     }
 }
